@@ -17,5 +17,7 @@ export const AUTH_FAIL = 'AUTH_FAIL';
 export const AUTH_START = 'AUTH_START';
 export const AUTH_LOGOUT = 'AUTH_LOGOUT';
 export const SET_AUTH_REDIRECT_PATH = 'SET_AUTH_REDIRECT_PATH';
+// redux saga
+export const AUTH_INITIATE_LOGOUT = 'AUTH_INITIATE_LOGOUT';
 
 //ALl these should be part of reducer and action
