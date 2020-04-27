@@ -1,5 +1,4 @@
 import * as actionTypes from './actionTypes';
-import axios from '../../axios-orders';
 
 export const addIngredient = (name) => {
     return {
@@ -28,13 +27,7 @@ export const fetchIngredientsFailed = () => {
 }
 
 export const initIngredient = () => {
-    return (dispatch) => {
-        //if we remove .json then url breaks down but since error handling is in parent component and in component did mount thats why it is not being called
-        axios.get('/ingredients.json').then(response => {
-            dispatch(setIngredients(response.data));
-        })
-        .catch(error => {
-            fetchIngredientsFailed()
-        });
+    return{
+        type: actionTypes.INIT_INGREDIENT
     }
 }
